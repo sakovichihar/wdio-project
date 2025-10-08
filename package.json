@@ -9,6 +9,6 @@
     },
     "scripts": {
         "wdio": "wdio run wdio.conf.js",
-        "plotva": "wdio run wdio.conf.js"
+        "roach": "wdio run wdio.conf.js"
     }
 }

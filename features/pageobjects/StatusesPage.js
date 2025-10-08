@@ -1,8 +1,8 @@
 class StatusesPage {
 
     get eliteStatuses() {
-        return $('//p[@class="status-title" and contains(text(), "elite")]')
+        return $('//p[@class="status-title" and text()="elite"]') //p[@class="status-title" and contains(text(), "elite")]
     }
 }
 
-export default new StatusesPage();
+module.exports = new StatusesPage();

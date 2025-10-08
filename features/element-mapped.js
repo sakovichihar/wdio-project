@@ -1,7 +1,7 @@
-import StatusesPage from '../pages/StatusesPage';
+const StatusesPage = require('../features/pageobjects/StatusesPage.js');
 
 const elementObject = {
-    'статус ELITE': StatusesPage[eliteStatuses]
+    'статус ELITE': StatusesPage.eliteStatuses
 }
 
 function getLocator(elementName) {
