@@ -1,6 +1,8 @@
 import { Then } from '@wdio/cucumber-framework';
+import StatusesPage from '../../pageobjects/StatusesPage.js';
+const { getLocator } = require('../element-mapped.js');
 
-Then(/^I should see a flash message saying (.*)$/, async (message) => {
-    await expect(flashAlert).toBeExisting();
-    await expect(flashAlert).toHaveText(expect.stringContaining(message));
+Then('Я вижу {string}', async function (element) {
+    const locator = getLocator(element)
+    await expect(locator).toBeDisplayed();
 });
