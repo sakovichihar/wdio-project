@@ -13,6 +13,7 @@ class HoverPromo {
       // 'Акции': $('//*[@class="main-bottom-line dropdown dropdown-promo"]//*[@href="/promotions"]'),
       // 'Бонусы': $('//*[@class="main-bottom-line dropdown dropdown-promo"]//*[@href="/bonus"]'),
       // 'Турнир': $('//*[@class="main-bottom-line dropdown dropdown-promo"]//*[@href="/tournaments"]'),
+      // 'Пром': $('//*[@class="main-bottom-line dropdown dropdown-promo"]//*[@href="/tournaments"]'),
     };
   }
 
