@@ -1,8 +1,10 @@
 import { When } from '@wdio/cucumber-framework';
 const HoverPromo = require('./../pageobjects/HoverPromo.js');
+const HeaderPage = require('./../pageobjects/HeaderPage.js');
 const { getLocator } = require('../element-mapped.js');
 
-//
+//здесь надо перенести в отдельный файл маппинг элементов кнопок
+// и заменить hover page 
 When('Я навожу на кнопку {string}', async function(section) {
     const button = HoverPromo.button[section]
     await this.button.moveTo();
