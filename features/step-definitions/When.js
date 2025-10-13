@@ -3,8 +3,9 @@ const HoverPromo = require('./../pageobjects/HoverPromo.js');
 const { getLocator } = require('../element-mapped.js');
 
 //
-When('Я навожу на кнопку Промо', async function() {
-    await HoverPromo.moveToPromoButton()
+When('Я навожу на кнопку {string}', async function(section) {
+    const button = HoverPromo.button[section]
+    await this.button.moveTo();
 })
 
 When('Я нажимаю кнопку {string}', async function(section) {
@@ -12,6 +13,7 @@ When('Я нажимаю кнопку {string}', async function(section) {
     await button.click()
 });
 
+// если тест падает, а локатор внизу страницы, то можно поскроллить для отладки
 When('Я скроллю страницу до {string}', async function(element) {
     const locator = getLocator(element)
 
@@ -19,6 +21,7 @@ When('Я скроллю страницу до {string}', async function(element)
     await locator.scrollIntoView(); //потом скроллю ебучую страницу
 });
 
+//на всякий случай
 When ('Я ожидаю заданное время', async function () {
     
     await browser.pause(5000)
