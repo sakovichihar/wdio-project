@@ -14,7 +14,7 @@ const elementObject = {
     'турнир luckyleague': TournamentPage.requiredTournament,
     'бонус Подарок на день рождения': BonusPage.requiredBonus,
     'кнопку Узнать больше': LotteryPage.lotteriesMoreInfoButton,
-    'блок Как получить кешбэк': CashbackPage.blockHowGetCashback,
+    'блок Как получить кешбэк': CashbackPage.blockHowGet,
     'активную новость 1': NewsPage.activeNews_1,
     'активную новость 2': NewsPage.activeNews_2,
     'действующую акциию 1': PromotionsPage.activePromotions_1,

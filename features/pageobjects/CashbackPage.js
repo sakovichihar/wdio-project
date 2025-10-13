@@ -1,6 +1,6 @@
 class CashbackPage {
 
-    get blockHowGetCashback() {
+    get blockHowGet() {
         
         return $('//*[@id="contentBox"]//h2[contains(text(), "Как получить Кешбэк")]')
     }
