@@ -2,8 +2,6 @@ const BonusPage = require('./pageobjects/BonusPage.js');
 const LotteryPage = require('./pageobjects/LotteryPage.js');
 const StatusPage = require('./pageobjects/StatusPage.js');
 const TournamentPage = require('./pageobjects/TournamentPage.js');
-const BonusPage = require('./pageobjects/BonusPage.js');
-const LotteryPage = require('./pageobjects/LotteryPage.js');
 const CashbackPage = require('./pageobjects/CashbackPage.js');
 const NewsPage = require('./pageobjects/NewsPage.js');
 const PromotionsPage = require('./pageobjects/PromotionsPage.js');
@@ -22,7 +20,7 @@ const elementObject = {
     'действующую акциию 1': PromotionsPage.activePromotions_1,
     'действующую акциию 2': PromotionsPage.activePromotions_2,
     'завершенную акцию 1': PromotionsPage.expiredPromotions_1,
-    'завершенную акцию 1': PromotionsPage.expiredPromotions_2,
+    'завершенную акцию 2': PromotionsPage.expiredPromotions_2,
     'почта подтвержденна': ProfilePage.confirmedEmailLabel,
     'статус NEW': ProfilePage.statusNew,
     'Поле e-mail': AuthPage.emailField,

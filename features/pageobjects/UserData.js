@@ -6,4 +6,4 @@ require('dotenv').config();
         'Пароль пользоваетля': process.env.PASSWORD_ROX
     }
 
-module.exports = new UserData();
+module.exports = { values };

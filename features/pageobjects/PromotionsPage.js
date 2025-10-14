@@ -1,16 +1,16 @@
 class PromotionsPage {
 
     get activePromotions_1(){
-        return $('//*[@class="promotions"]/div[1]/div[1]') 
+        return $('//div[@class = "actions__items"][1]//div[@class = "news-list__item"][1]') 
     }
     get activePromotions_2(){
-        return $('//*[@class="promotions"]/div[1]/div[2]')
+        return $('//div[@class = "actions__items"][1]//div[@class = "news-list__item"][2]')
     }
     get expiredPromotions_1(){
-        return $('//div[@class="black-rulls black-rulls-h"]/following-sibling::div[@class="actions__items"]/div[1]')
+        return $('//div[@class = "actions__items"][2]//div[@class = "news-list__item"][1]')
     }
     get expiredPromotions_2(){
-        return $('//div[@class="black-rulls black-rulls-h"]/following-sibling::div[@class="actions__items"]/div[2]')
+        return $('//div[@class = "actions__items"][2]//div[@class = "news-list__item"][2]')
     }
 }
 

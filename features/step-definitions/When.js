@@ -1,6 +1,6 @@
 import { When } from '@wdio/cucumber-framework';
 const HoverPromo = require('./../pageobjects/HoverPromo.js');
-const HeaderPage = require('./../pageobjects/HeaderPage.js');
+const Header = require('../pageobjects/Header.js');
 const UserData = require('../pageobjects/UserData.js');
 const { getLocator } = require('../element-mapped.js');
 require('dotenv').config();
@@ -8,18 +8,25 @@ require('dotenv').config();
 //здесь надо перенести в отдельный файл маппинг элементов кнопок
 // и заменить hover page 
 When('Я навожу на кнопку {string}', async function(section) {
-    const button = HoverPromo.button[section]
-    await this.button.moveTo();
+    const hover = HoverPromo.button[section]
+    await hover.moveTo();
 })
 
-When('Я нажимаю кнопку {string}', async function(section) {
-    const button = HoverPromo.button[section]
+When('Я нажимаю кнопку {string} в {string}', async function(section, location) {
+
+    let place
+    if(location === 'Хэдере'){
+        place = Header
+    } else {
+        place = HoverPromo
+    }
+    const button = place.button[section]
     await button.click()
 });
 
 When('Я ввожу {string} в {string}', async function(value, field){
      
-    const data = UserData[value]
+    const data = UserData.values[value]
     const input = getLocator(field)
     await input.setValue(data)
 })
@@ -35,5 +42,5 @@ When('Я скроллю страницу до {string}', async function(element)
 //на всякий случай
 When ('Я ожидаю заданное время', async function () {
     
-    await browser.pause(5000)
-}) 
+    await browser.pause(1000)
+})
