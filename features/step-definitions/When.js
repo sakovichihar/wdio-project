@@ -1,7 +1,9 @@
 import { When } from '@wdio/cucumber-framework';
 const HoverPromo = require('./../pageobjects/HoverPromo.js');
 const HeaderPage = require('./../pageobjects/HeaderPage.js');
+const UserData = require('../pageobjects/UserData.js');
 const { getLocator } = require('../element-mapped.js');
+require('dotenv').config();
 
 //здесь надо перенести в отдельный файл маппинг элементов кнопок
 // и заменить hover page 
@@ -14,6 +16,13 @@ When('Я нажимаю кнопку {string}', async function(section) {
     const button = HoverPromo.button[section]
     await button.click()
 });
+
+When('Я ввожу {string} в {string}', async function(value, field){
+     
+    const data = UserData[value]
+    const input = getLocator(field)
+    await input.setValue(data)
+})
 
 // если тест падает, а локатор внизу страницы, то можно поскроллить для отладки
 When('Я скроллю страницу до {string}', async function(element) {

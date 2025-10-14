@@ -7,6 +7,8 @@ const LotteryPage = require('./pageobjects/LotteryPage.js');
 const CashbackPage = require('./pageobjects/CashbackPage.js');
 const NewsPage = require('./pageobjects/NewsPage.js');
 const PromotionsPage = require('./pageobjects/PromotionsPage.js');
+const ProfilePage = require('./pageobjects/ProfilePage.js');
+const AuthPage = require('./pageobjects/AuthPage.js');
 
 //здеся я маплю геттеры для получению локаторов для then шагов 
 const elementObject = {
@@ -20,7 +22,11 @@ const elementObject = {
     'действующую акциию 1': PromotionsPage.activePromotions_1,
     'действующую акциию 2': PromotionsPage.activePromotions_2,
     'завершенную акцию 1': PromotionsPage.expiredPromotions_1,
-    'завершенную акцию 1': PromotionsPage.expiredPromotions_2
+    'завершенную акцию 1': PromotionsPage.expiredPromotions_2,
+    'почта подтвержденна': ProfilePage.confirmedEmailLabel,
+    'статус NEW': ProfilePage.statusNew,
+    'Поле e-mail': AuthPage.emailField,
+    'Поле password': AuthPage.passwordField
 }
 
 function getLocator(elementName) {
