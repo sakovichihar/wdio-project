@@ -5,8 +5,6 @@ const UserData = require('../pageobjects/UserData.js');
 const { getLocator } = require('../element-mapped.js');
 require('dotenv').config();
 
-//здесь надо перенести в отдельный файл маппинг элементов кнопок
-// и заменить hover page 
 When('Я навожу на кнопку {string}', async function(section) {
     const hover = HoverPromo.button[section]
     await hover.moveTo();
