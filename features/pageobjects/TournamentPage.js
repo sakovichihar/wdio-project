@@ -1,7 +1,7 @@
 class TournamentPage {
 
     get requiredTournament() {
-        return $('//*[@data-tournament="luckyleague"]')
+        return '//*[@data-tournament="luckyleague"]'
     }
 }
 

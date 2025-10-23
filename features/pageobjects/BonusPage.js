@@ -1,7 +1,7 @@
 class BonusPage {
 
     get requiredBonus() {
-        return $('//*[@id="birthday"]')
+        return '//*[@id="birthday"]'
     }
 }
 

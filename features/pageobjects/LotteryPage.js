@@ -1,7 +1,7 @@
 class LotteryPage {
 
     get lotteriesMoreInfoButton() {
-        return $('//*[@class="understand-more"]')
+        return '//*[@class="understand-more"]'
     }
 }
 
