@@ -12,14 +12,14 @@ When('Я навожу на кнопку {string}', async function(section) {
 
 When('Я нажимаю кнопку {string} в {string}', async function(section, location) {
 
-    let place
-    if(location === 'Хэдере'){
-        place = Header
-    } else {
-        place = HoverPromo
-    }
-    const button = place.button[section]
-    await button.click()
+    // let place
+    // if(location === 'Хэдере'){
+    //     place = Header
+    // } else {
+    //     place = HoverPromo
+    // }
+    // const button = place.button[section]
+    // await button.click()
 });
 
 When('Я ввожу {string} в {string}', async function(value, field){
@@ -31,8 +31,8 @@ When('Я ввожу {string} в {string}', async function(value, field){
 
 // если тест падает, а локатор внизу страницы, то можно поскроллить для отладки
 When('Я скроллю страницу до {string}', async function(element) {
+    
     const locator = getLocator(element)
-
     await locator.waitForDisplayed({ timeout: 5000 }); // сначала жду чтобы ебанный локатор появился в дом дереве
     await locator.scrollIntoView(); //потом скроллю ебучую страницу
 });

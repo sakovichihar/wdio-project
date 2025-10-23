@@ -1,3 +1,6 @@
+// надо поискать инфу, можно ли сразу папку импортировать, чтобы не было много 
+//вложенности и не нужно было каждый добавленный файл с POM импортировать 
+
 const BonusPage = require('./pageobjects/BonusPage.js');
 const LotteryPage = require('./pageobjects/LotteryPage.js');
 const StatusPage = require('./pageobjects/StatusPage.js');
@@ -9,6 +12,9 @@ const ProfilePage = require('./pageobjects/ProfilePage.js');
 const AuthPage = require('./pageobjects/AuthPage.js');
 
 //здеся я маплю геттеры для получению локаторов для then шагов 
+// этот костыль надо переделать под что-то общее, чтобы маппились не только xpath 
+// для then шагов, но и всё xpath 
+// + добавить сюда шаг, что получаемый xpath строкой мы обворачиваем в $('${string}')
 const elementObject = {
     'статус ELITE': StatusPage.requiredStatus,
     'турнир luckyleague': TournamentPage.requiredTournament,
