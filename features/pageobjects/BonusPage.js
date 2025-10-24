@@ -1,8 +1,6 @@
 class BonusPage {
 
-    get requiredBonus() {
-        return '//*[@id="birthday"]'
-    }
+    get requiredBonus() {return '//*[@id="birthday"]'}
 }
 
 module.exports = new BonusPage();

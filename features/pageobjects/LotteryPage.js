@@ -1,8 +1,6 @@
 class LotteryPage {
 
-    get lotteriesMoreInfoButton() {
-        return '//*[@class="understand-more"]'
-    }
+    get lotteriesMoreInfoButton() {return '//*[@class="understand-more"]'}
 }
 
 module.exports = new LotteryPage();
