@@ -8,10 +8,6 @@ const PromotionsPage = require('./pageobjects/PromotionsPage.js');
 const ProfilePage = require('./pageobjects/ProfilePage.js');
 const AuthPage = require('./pageobjects/AuthPage.js');
 
-//здеся я маплю геттеры для получению локаторов для then шагов 
-// этот костыль надо переделать под что-то общее, чтобы маппились не только xpath 
-// для then шагов, но и всё xpath 
-
 class PageMapped {
     constructor() {
       this.pages = {
@@ -32,14 +28,14 @@ class PageMapped {
 
 function getLocator(pageName, elementName) {
 
-  const pageMapped = new PageMapped();
+  const pageMapped = new PageMapped()
 //здеся находим нужную страницу по названию
-  const pageInstance = pageMapped.pages[pageName];
+  const pageInstance = pageMapped.pages[pageName]
 //здеся по названию ищем нужный xpath
   const elementMap = pageInstance.elementMap[elementName];
 //здеся уже обворачиваем переменную как локатор и отдаем в return
   const locator = $(elementMap)
-  return locator;
+  return locator
 }
 
 module.exports = { getLocator };

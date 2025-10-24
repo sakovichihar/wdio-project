@@ -1,6 +1,10 @@
 class BonusPage {
 
-    get requiredBonus() {return '//*[@id="birthday"]'}
+    get elementMap() {
+        return {
+          'бонус Подарок на день рождения': '//*[@id="birthday"]' 
+        };
+    }
 }
 
 module.exports = new BonusPage();

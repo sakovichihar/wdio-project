@@ -1,6 +1,10 @@
 class LotteryPage {
 
-    get lotteriesMoreInfoButton() {return '//*[@class="understand-more"]'}
+    get elementMap() {
+        return {
+          'кнопку Узнать больше': '//*[@class="understand-more"]'
+        };
+  }
 }
 
 module.exports = new LotteryPage();

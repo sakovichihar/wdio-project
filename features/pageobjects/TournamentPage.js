@@ -1,6 +1,10 @@
 class TournamentPage {
 
-    get requiredTournament() { return '//*[@data-tournament="luckyleague"]'}
+    get elementMap() {
+        return {
+          'турнир luckyleague': '//*[@data-tournament="luckyleague"]'
+        };
+      }
 }
 
 module.exports = new TournamentPage();
