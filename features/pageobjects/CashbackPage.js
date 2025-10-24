@@ -1,6 +1,6 @@
 class CashbackPage {
 
-    get elementMap() {
+    get locatorsMap() {
         return {
           'блок Как получить кешбэк': '//*[@id="contentBox"]//h2[contains(text(), "Как получить Кешбэк")]'
         };

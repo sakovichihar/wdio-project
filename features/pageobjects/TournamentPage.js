@@ -1,6 +1,6 @@
 class TournamentPage {
 
-    get elementMap() {
+    get locatorsMap() {
         return {
           'турнир luckyleague': '//*[@data-tournament="luckyleague"]'
         };

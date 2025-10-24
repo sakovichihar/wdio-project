@@ -1,6 +1,6 @@
 class HoverPromo {
 
-    get elementMap() {
+    get locatorsMap() {
       return {
       'Промо': '//a[@href="/promo"]',
       'Статус': '//ul[contains(@class, "dropdown-promo")]//a[@href="/status" and contains(normalize-space(.), "статусы")]',

@@ -1,6 +1,6 @@
 class StatusPage {
   
-    get elementMap() {
+    get locatorsMap() {
         return {
           'статус ELITE': '//p[@class="status-title" and text()="elite"]'
         };

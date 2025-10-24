@@ -1,6 +1,6 @@
 class LotteryPage {
 
-    get elementMap() {
+    get locatorsMap() {
         return {
           'кнопку Узнать больше': '//*[@class="understand-more"]'
         };

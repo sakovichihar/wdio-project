@@ -5,10 +5,10 @@ const UserData = require('../pageobjects/UserData.js');
 const { getLocator } = require('../element-mapped.js');
 require('dotenv').config();
 
-// When('Я навожу на кнопку {string}', async function(section) {
-//     const hover = HoverPromo.button[section]
-//     await hover.moveTo();
-// })
+When('Я навожу на кнопку {string} в {string}', async function(element, page) {
+    const button = getLocator(element, page)
+    await button.moveTo();
+})
 
 // When('Я нажимаю кнопку {string} в {string}', async function(section, pageName) {
 

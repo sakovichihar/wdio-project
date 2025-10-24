@@ -26,15 +26,16 @@ class PageMapped {
     }
   }
 
-function getLocator(pageName, elementName) {
+function getLocator(elementName, pageName) {
 
   const pageMapped = new PageMapped()
 //здеся находим нужную страницу по названию
-  const pageInstance = pageMapped.pages[pageName]
+  const selectedPage = pageMapped.pages[pageName]
 //здеся по названию ищем нужный xpath
-  const elementMap = pageInstance.elementMap[elementName];
+  const locatorString = selectedPage.locatorsMap[elementName];
 //здеся уже обворачиваем переменную как локатор и отдаем в return
-  const locator = $(elementMap)
+  const locator = $(locatorString)
+
   return locator
 }
 

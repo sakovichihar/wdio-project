@@ -1,6 +1,6 @@
 class BonusPage {
 
-    get elementMap() {
+    get locatorsMap() {
         return {
           'бонус Подарок на день рождения': '//*[@id="birthday"]' 
         };
