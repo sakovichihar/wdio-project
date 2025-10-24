@@ -12,30 +12,34 @@ const AuthPage = require('./pageobjects/AuthPage.js');
 // этот костыль надо переделать под что-то общее, чтобы маппились не только xpath 
 // для then шагов, но и всё xpath 
 
-// class pageMapped {
-//     constructor() {
-//         this.pages = {
-//           авторизация: AuthPage,
-//           бонусы: BonusPage,
-//           кешбэк: CashbackPage,
-//           хэдер: Header,
-//           hover: HoverPromo, // 'ховер' на англ. для краткости, или 'ховер'
-//           лотереи: LotteryPage,
-//           новости: NewsPage,
-//           профиль: ProfilePage,
-//           акции: PromotionsPage,
-//           статус: StatusPage,
-//           турнир: TournamentPage,
-//           пользователь: UserData // Для данных
-//         };
-//       }
-//     }
-
+class PageMapped {
+    constructor() {
+      this.pages = {
+        'Авторизация': AuthPage,
+        'Бонусы': BonusPage,
+        'Кешбэк': CashbackPage,
+        'Хэдер': Header,
+        'Ховер': HoverPromo,
+        'Лотереи': LotteryPage,
+        'Новости': NewsPage,
+        'Профиль': ProfilePage,
+        'Акции': PromotionsPage,
+        'Статус': StatusPage,
+        'Турнир': TournamentPage,
+      };
+    }
+  }
 
 function getLocator(pageName, elementName) {
-    const locator = elementObject[elementName];
 
-    return $(locatorString)
-    }
+  const pageMapped = new PageMapped();
+//здеся находим нужную страницу по названию
+  const pageInstance = pageMapped.pages[pageName];
+//здеся по названию ищем нужный xpath
+  const elementMap = pageInstance.elementMap[elementName];
+//здеся уже обворачиваем переменную как локатор и отдаем в return
+  const locator = $(elementMap)
+  return locator;
+}
 
 module.exports = { getLocator };

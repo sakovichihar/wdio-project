@@ -1,7 +1,7 @@
 class HoverPromo {
 
   //здеся я храню все локаторы для нажатия кнопок
-  get promoButton() { return '//a[@href="/promo"]';}
+    get promoButton() { return '//a[@href="/promo"]';}
     get statusButton() { return '//ul[contains(@class, "dropdown-promo")]//a[@href="/status" and contains(normalize-space(.), "статусы")]';}
     get tournamentButton() { return '//ul[contains(@class, "dropdown-promo")]//a[@href="/tournaments" and contains(normalize-space(.), "турниры")]';}
     get bonusesButton() { return '//ul[contains(@class, "dropdown-promo")]//a[@href="/bonus" and contains(normalize-space(.), "бонусы")]';}
