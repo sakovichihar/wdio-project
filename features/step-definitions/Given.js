@@ -6,4 +6,5 @@ Given('Я открываю главную страницу {string} на окр�
 
     const key = `${project}_${env}`
     const url = process.env[key];
+    await browser.url(url);
 });
