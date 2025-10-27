@@ -32,7 +32,7 @@ When('Я скроллю страницу {string} до {string}', async function
 });
 
 //на всякий случай
-When ('Я ожидаю заданное время {string} секунды', async function () {
+When ('Я ожидаю заданное время {string} секунды', async function (seconds) {
     const time = seconds*1000 
     await browser.pause(time)
 })

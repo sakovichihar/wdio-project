@@ -8,6 +8,7 @@ const PromotionsPage = require('./pageobjects/PromotionsPage.js');
 const ProfilePage = require('./pageobjects/ProfilePage.js');
 const AuthPage = require('./pageobjects/AuthPage.js');
 const BalancePage = require('./pageobjects/BalancePage.js');
+const Header = require('./pageobjects/Header.js');
 
 class PageMapped {
     constructor() {

@@ -9,7 +9,10 @@
     },
     "scripts": {
         "wdio": "wdio run wdio.conf.js",
-        "roach": "wdio run wdio.conf.js"
+        "roach": "wdio run wdio.conf.js",
+        "test-promo": "wdio run wdio.conf.js --spec features/promo.feature",
+        "test-auth": "wdio run wdio.conf.js --spec features/auth.feature",
+        "test-all": "npm run test:promo && npm run test:auth"
     },
     "dependencies": {
         "dotenv": "^17.2.3"
