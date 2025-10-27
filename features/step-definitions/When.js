@@ -6,7 +6,7 @@ const { getLocator } = require('../element-mapped.js');
 require('dotenv').config();
 
 When('Я навожу на кнопку {string} в {string}', async function(element, page) {
-    const button = getLocator(element, page)
+    const button = await getLocator(element, page)
     await button.moveTo();
 })
 

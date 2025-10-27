@@ -9,6 +9,7 @@ const ProfilePage = require('./pageobjects/ProfilePage.js');
 const AuthPage = require('./pageobjects/AuthPage.js');
 const BalancePage = require('./pageobjects/BalancePage.js');
 const Header = require('./pageobjects/Header.js');
+const HoverPromo = require('./pageobjects/HoverPromo.js');
 
 class PageMapped {
     constructor() {
@@ -29,7 +30,7 @@ class PageMapped {
     }
   }
 
-function getLocator(elementName, pageName) {
+async function getLocator(elementName, pageName) {
 
   const pageMapped = new PageMapped()
 //здеся находим нужную страницу по названию
@@ -37,8 +38,7 @@ function getLocator(elementName, pageName) {
 //здеся по названию ищем нужный xpath
   const locatorString = selectedPage.locatorsMap[elementName];
 //здеся уже обворачиваем переменную как локатор и отдаем в return
-  const locator = $(locatorString)
-
+  const locator = await $(locatorString)
   return locator
 }
 
